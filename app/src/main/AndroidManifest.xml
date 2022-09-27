@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.university.mrmindeduniversity">
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MrMindedLast"
+        tools:targetApi="31">
+        <service
+            android:name=".Notification.Messaging_Messaging"
+            android:exported="true"
+            android:permission="TODO"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".buyCourse.rozarpayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Application.courseDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Application.Splash_screen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".buyCourse.goto_buyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".buyCourse.buyCourseActivityOld"
+            android:exported="false" />
+        <activity
+            android:name=".settings.adminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".authentication.forgotpasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".authentication.RegisterActivity"
+            android:exported="true" />
+        <activity android:name=".player.playerActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar.Fullscreen" />
+        <activity android:name=".Application.ShowPdfActivity"
+            android:exported="false"/>
+        <activity android:name=".player.videoListActivity"
+            android:exported="false"/>
+    </application>
+
+</manifest>

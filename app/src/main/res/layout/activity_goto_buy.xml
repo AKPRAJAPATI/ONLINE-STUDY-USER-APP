@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buyCourse.goto_buyActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfile_AppLogo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="2dp"
+                    android:src="@drawable/mr_rounded" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userName_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+
+                        android:text="Buy Course"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4hsdp"
+        app:cardCornerRadius="@dimen/_10hsdp"
+        app:cardElevation="@dimen/_4hsdp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:id="@+id/courseThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170hsdp"
+                android:padding="@dimen/_2hsdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                android:transitionName="photoa" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4hsdp"
+        app:cardCornerRadius="@dimen/_10hsdp"
+        app:cardElevation="@dimen/_4hsdp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView4"
+        app:layout_constraintStart_toStartOf="@+id/cardView4"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4hsdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/courseName_goto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Name"
+
+                android:textSize="@dimen/_15font_ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/coursePric_goto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Price"
+                android:textSize="@dimen/_14font_ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4hsdp"
+        app:cardCornerRadius="@dimen/_10hsdp"
+        app:cardElevation="@dimen/_4hsdp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView5"
+        app:layout_constraintStart_toStartOf="@+id/cardView5"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4hsdp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buyNowBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_31hsdp"
+                android:layout_margin="@dimen/_8hsdp"
+                android:background="@drawable/btn_like"
+                android:fontFamily="serif"
+                android:text="Buy Now"
+                android:textColor="#FBFBFB"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

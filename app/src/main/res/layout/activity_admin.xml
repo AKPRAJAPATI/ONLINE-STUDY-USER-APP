@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings.adminActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfile_AppLogo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="2dp"
+                    android:src="@drawable/mr_rounded" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/userName_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+
+                        android:text="Mr Minded University"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/whatsapp"
+                        android:layout_width="@dimen/_30hsdp"
+                        android:layout_height="@dimen/_30hsdp"
+                        android:layout_gravity="center"
+                        android:onClick="whatsapp"
+                        android:layout_margin="@dimen/_5hsdp"
+                        android:src="@drawable/whatsapp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/adminImage"
+            android:layout_width="@dimen/_100hsdp"
+            android:layout_height="@dimen/_100hsdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_100hsdp"
+            android:src="@drawable/mr_rounded" />
+
+        <TextView
+            android:id="@+id/adminName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10hsdp"
+            android:gravity="center"
+            android:text="Mr Minded"
+            android:textSize="@dimen/_22font_ssp" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="version 1.0"
+            android:textSize="@dimen/_12font_ssp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_7hsdp"
+                android:padding="5dp"
+                app:cardCornerRadius="@dimen/_10hsdp"
+                app:cardElevation="3dp"
+                android:outlineSpotShadowColor="@color/colorPrimary"
+                android:outlineAmbientShadowColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5hsdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/_30hsdp"
+                        android:layout_height="@dimen/_30hsdp"
+                        android:layout_gravity="center"
+                        android:onClick="telegram"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/telegram"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_30hsdp"
+                        android:layout_height="@dimen/_30hsdp"
+                        android:layout_gravity="center"
+                        android:onClick="yout"
+                        android:src="@drawable/youtube"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_30hsdp"
+                        android:layout_height="@dimen/_30hsdp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/gmail"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

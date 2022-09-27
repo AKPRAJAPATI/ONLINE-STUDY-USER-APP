@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="#A182E8"
+    tools:context=".buyCourse.rozarpayActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10hsdp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="@dimen/_7hsdp"
+            app:cardElevation="@dimen/_2hsdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_3hsdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5hsdp"
+                    android:layout_marginTop="@dimen/_5hsdp"
+                    android:gravity="center"
+                    android:text="Mr Minded University"
+                    android:textSize="@dimen/_15font_ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/coursenameBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5hsdp"
+                    android:layout_marginTop="@dimen/_5hsdp"
+                    android:text="Course Name "
+                    android:textSize="@dimen/_15font_ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/coursePriceBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5hsdp"
+                    android:layout_marginTop="@dimen/_5hsdp"
+                    android:text="Price :- 20"
+                    android:textSize="@dimen/_15font_ssp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/filledTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5hsdp"
+                    android:layout_marginTop="@dimen/_5hsdp"
+                    android:hint="Email">
+
+                    <!--this is the actual edit text which takes the input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/courseEmailBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/filledTextFieldNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5hsdp"
+                    android:layout_marginTop="@dimen/_5hsdp"
+                    android:hint="Phone number">
+
+                    <!--this is the actual edit text which takes the input-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/courseNumberBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buyNowBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_31hsdp"
+                    android:layout_margin="@dimen/_8hsdp"
+                    android:background="@drawable/btn_like"
+                    android:fontFamily="serif"
+                    android:text="Pay Now"
+                    android:textColor="#FBFBFB"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

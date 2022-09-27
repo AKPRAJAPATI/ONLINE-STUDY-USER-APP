@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_3hsdp"
+        android:padding="@dimen/_2hsdp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:cardCornerRadius="@dimen/_7hsdp"
+        app:cardElevation="@dimen/_4hsdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/content_number"
+                android:layout_width="@dimen/_39hsdp"
+                android:layout_height="@dimen/_39hsdp"
+                android:layout_marginStart="@dimen/_12hsdp"
+                android:layout_marginTop="@dimen/_12hsdp"
+                android:layout_marginBottom="@dimen/_12hsdp"
+                android:gravity="center"
+                android:src="@drawable/pdfimg"
+                android:textAlignment="center"
+                android:textColor="#E4E7F4"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pdfName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="serif"
+                android:text="Welcome to the course"
+                android:textColor="#565656"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/content_number"
+                app:layout_constraintStart_toEndOf="@+id/content_number"
+                app:layout_constraintTop_toTopOf="@+id/content_number" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
